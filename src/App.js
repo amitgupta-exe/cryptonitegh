@@ -82,12 +82,16 @@ function App() {
     //Cipher Decipher
     if (mode === 'encrypt') {
       var ciperText = bacon.encrypt(text);
+      console.log(ciperText);
       setBaconian(ciperText);
     } else if (mode === 'decrypt') {
       var decipherText = bacon.decrypt(text);
       setBaconian(decipherText)
     }
+
+    console.log(baconian);
   }
+
   function atbash(text, mode) {
     //Creating new Baconian Object
     let atbash = new crypto.Atbash();
@@ -219,7 +223,6 @@ function App() {
 
       merged = splitToChunks(merged, key);
 
-      console.log(merged);
 
       str = " ";
       j = 0;
@@ -325,14 +328,14 @@ function App() {
         <form className="form" onSubmit={(e) => { e.preventDefault(); }} action="">
           <div className="user-input">
             <label htmlFor="userInput">Enter Text</label>
-            <textarea type="text" id="userInput" />
+            <textarea type="text" className="userInput" />
           </div>
           <div className="settings">
-            <select defaultValue={"encrypt"} name="" id="mode">
+            <select defaultValue={"encrypt"} name="" className="mode">
               <option value="encrypt">Encrypt</option>
               <option value="decrypt">Decrypt</option>
             </select>
-            <button onClick={() => { bacon(document.getElementById("userInput").value, document.getElementById("mode").value) }} type="submit">Convert</button>
+            <button onClick={() => { bacon(document.getElementsByClassName("userInput")[0].value, document.getElementsByClassName("mode")[0].value) }} type="submit">Convert</button>
           </div>
           <div className="output">
             <label htmlFor="output">Output</label>
@@ -352,14 +355,14 @@ function App() {
         <form className="form" onSubmit={(e) => { e.preventDefault(); }} action="">
           <div className="user-input">
             <label htmlFor="userInput">Enter Text</label>
-            <textarea type="text" id="userInput" />
+            <textarea type="text" className="userInput" />
           </div>
           <div className="settings">
-            <select defaultValue={"encrypt"} name="" id="mode">
+            <select defaultValue={"encrypt"} name="" className="mode">
               <option value="encrypt">Encrypt</option>
               <option value="decrypt">Decrypt</option>
             </select>
-            <button onClick={() => { atbash(document.getElementById("userInput").value, document.getElementById("mode").value) }} type="submit">Convert</button>
+            <button onClick={() => { atbash(document.getElementsByClassName("userInput")[1].value, document.getElementsByClassName("mode")[1].value) }} type="submit">Convert</button>
           </div>
           <div className="output">
             <label htmlFor="output">Output</label>
@@ -380,18 +383,18 @@ function App() {
         <form className="form" onSubmit={(e) => { e.preventDefault(); }} action="">
           <div className="user-input">
             <label htmlFor="userInput">Enter Text</label>
-            <textarea type="text" id="userInput" />
+            <textarea type="text" className="userInput" />
           </div>
           <div className="settings">
             <div>
               <label htmlFor="#key">Enter Key (Word): </label>
-              <input id='key' type="text" />
+              <input className='key' type="text" />
             </div>
-            <select defaultValue={"encrypt"} name="" id="mode">
+            <select defaultValue={"encrypt"} name="" className="mode">
               <option value="encrypt">Encrypt</option>
               <option value="decrypt">Decrypt</option>
             </select>
-            <button onClick={() => { fair(document.getElementById("userInput").value, document.getElementById("mode").value, document.getElementById("key").value) }} type="submit">Convert</button>
+            <button onClick={() => { fair(document.getElementsByClassName("userInput")[2].value, document.getElementsByClassName("mode")[2].value, document.getElementsByClassName("key")[0].value) }} type="submit">Convert</button>
           </div>
           <div className="output">
             <label htmlFor="output">Output</label>
@@ -411,18 +414,18 @@ function App() {
         <form className="form" onSubmit={(e) => { e.preventDefault(); }} action="">
           <div className="user-input">
             <label htmlFor="userInput">Enter Text:</label>
-            <textarea type="text" id="userInput" />
+            <textarea type="text" className="userInput" />
           </div>
           <div className="settings">
             <div>
               <label htmlFor="#key">Enter Key (Number): </label>
-              <input id='key' type="text" />
+              <input className='key' type="text" />
             </div>
-            <select defaultValue={"encrypt"} name="" id="mode">
+            <select defaultValue={"encrypt"} name="" className="mode">
               <option value="encrypt">Encrypt</option>
               <option value="decrypt">Decrypt</option>
             </select>
-            <button onClick={() => { fence(document.getElementById("userInput").value, document.getElementById("mode").value, document.getElementById("key").value) }} type="submit">Convert</button>
+            <button onClick={() => { fence(document.getElementsByClassName("userInput")[3].value, document.getElementsByClassName("mode")[3].value, document.getElementsByClassName("key")[1].value) }} type="submit">Convert</button>
           </div>
           <div className="output">
             <label htmlFor="output">Output:</label>
@@ -442,18 +445,18 @@ function App() {
         <form className="form" onSubmit={(e) => { e.preventDefault(); }} action="">
           <div className="user-input">
             <label htmlFor="userInput">Enter Text</label>
-            <textarea type="text" id="userInput" />
+            <textarea type="text" className="userInput" />
           </div>
           <div className="settings">
             <div>
               <label htmlFor="#key">Enter Key (Word): </label>
-              <input id='key' type="text" />
+              <input className='key' type="text" />
             </div>
-            <select defaultValue={"encrypt"} name="" id="mode">
+            <select defaultValue={"encrypt"} name="" className="mode">
               <option value="encrypt">Encrypt</option>
               <option value="decrypt">Decrypt</option>
             </select>
-            <button onClick={() => { vig(document.getElementById("userInput").value, document.getElementById("mode").value, document.getElementById("key").value) }} type="submit">Convert</button>
+            <button onClick={() => { vig(document.getElementsByClassName("userInput")[4].value, document.getElementsByClassName("mode")[4].value, document.getElementsByClassName("key")[2].value) }} type="submit">Convert</button>
           </div>
           <div className="output">
             <label htmlFor="output">Output</label>
