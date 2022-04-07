@@ -1,0 +1,50 @@
+
+.card{
+    position: relative;
+    min-height: 200px;
+    font-size: 10px;
+    background: white;
+    color: #545454;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: 0.5s ease;
+    text-decoration: none !important;
+}
+
+.card-info{
+    width: 65%;
+}
+
+.dp-image{
+    width: 12em;
+    height: 12em;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.dp-image img{
+    width:100%;
+    transition: 0.5s ease;
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+.pose-image{
+    transform: scale(0);
+    width: 15em;
+    position:absolute;
+    right: 0.5rem;
+    bottom:1rem;
+    transition: 0.5s ease;
+
+}
+
+a{
+    text-decoration: none;
+}

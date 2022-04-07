@@ -1,0 +1,142 @@
+  .main{
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .caeser-bg{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position:right;
+    opacity: 0.5;
+  }
+  
+  .form{
+    position: absolute;
+    top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 60vw;
+    height: 60vh;
+  }
+  
+  
+  
+  label{
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  
+  .settings{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  
+  }
+  
+  select{
+    transform: scale(85%);
+    cursor: pointer;
+    transition: 0.5s ease;
+    border: none;
+    letter-spacing: 0.25rem;
+    padding: 0.8em 1em;
+    background: #616161;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  select:hover{
+    transform: scale(90%);
+    transition: 0.5s ease;
+  }
+  
+  button{
+    border: none;
+    letter-spacing: 0.25rem;
+    padding: 0.8em 1em;
+    background: white ;
+    color: #616161;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transition: 1s ease;
+    transform: scale(100%);
+    cursor: pointer;
+  }
+  
+  button:hover{
+    background: #616161;
+    color: white;
+    transition: 0.3s ease;
+  }
+  
+  
+  .user-input, .output{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  #userInput, #output{
+    margin: 0.5rem 0;
+    width: 50vw;
+    height: 7.5rem;
+    outline: none;
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem;
+    resize: none;
+  }
+  
+  .wiki{
+    width: 50vw;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: absolute;
+    left: 5vw;
+    bottom: 5vw;
+    line-height: 2.0rem;
+  }
+  
+  .wiki h2{
+    letter-spacing: 0.3rem;
+  }
+  .wiki h3{
+    letter-spacing: 0.3rem;
+  }
+  .wiki p{
+    letter-spacing: 0.1rem;
+  }
+  
+  
+  
+  
+  
+  
+  @media screen and (max-width: 1000px) {
+  
+    .form{
+  
+      width: 100vw;
+      height: 60vh;
+    }
+    
+    #userInput, #output{
+      width: 85vw;
+    }
+  
+  
+    .wiki{
+      width: 80vw;
+      height: 30vh;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 5vw;
+      line-height: 1.5rem;
+      font-size: smaller;
+    }
+  }
